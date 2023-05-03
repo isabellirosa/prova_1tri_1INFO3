@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: Média ponderada
@@ -8,11 +9,13 @@
     */
 
     //ENTRADA
-
+    const nota1 = Number(prompt(`Qual é a nota da primeira atividade?`).trim().replace(",", "."));
+    const nota2 = Number(prompt(`Qual é a nota da segunda atividade?`).trim().replace(",", "."));
 
     //PROCESSAMENTO
-
+    const total = (nota1* 3/10)+(nota2* 7/10);
 
     //SAÍDA
 
+    alert(`A média final do aluno é ${total.toFixed(2).replace(".", ",")}.`);
 </script>

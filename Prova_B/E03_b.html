@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: Consumo viagem
@@ -8,11 +9,17 @@
     */
 
     //ENTRADA
-
+    const distancia= Number(prompt(`Qual é a distância em quilometros da viagem?`).trim().replace(",", "."));
 
     //PROCESSAMENTO
-
-
+    const litros= distancia /14;
+    const preço= litros*5.29;
+    const pedagio= Math.floor(distancia/50)*5.29;
+    const total= preço+pedagio;
     //SAÍDA
 
+    alert(` Litros: ${litros.toFixed(2).replace(".", ",")}
+            Preço da gasolina: R$ ${preço.toFixed(2).replace(".", ",")}
+            Preço do pedagio: R$ ${pedagio.toFixed(2).replace(".", ",")}
+            Preço total: R$ ${total.toFixed(2).replace(".", ",")} `);
 </script>

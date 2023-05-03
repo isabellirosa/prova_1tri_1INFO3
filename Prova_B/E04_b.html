@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: Média preços
@@ -7,11 +8,14 @@
     */
 
     //ENTRADA
-
+    const mercado1= Number(prompt(`Insira o preço da carne no mercado 1:`).trim().replace(",", "."));
+    const mercado2= Number(prompt(`Insira o preço da carne no mercado 2:`).trim().replace(",", "."));
+    const mercado3= Number(prompt(`Insira o preço da carne no mercado 3:`).trim().replace(",", "."));
+    const mercado4= Number(prompt(`Insira o preço da carne no mercado 4:`).trim().replace(",", "."));
 
     //PROCESSAMENTO
-
+    const media= (mercado1+mercado2+mercado3+mercado4)/4
 
     //SAÍDA
-
+    alert(`A média do preço da carne é R$ ${media.toFixed(2).replace(".", ",")}`);
 </script>
