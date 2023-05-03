@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: Consumo motocicleta
@@ -8,11 +9,13 @@
     */
 
     //ENTRADA
-
-
+    const quilometros= Number(prompt(`Insira quantos quilômetros a motocicleta consegue percorrer com cada litro de combustível:`).trim().replace(",", "."));
+    const quilometragem= Number(prompt(`Insira qual a quilometragem que já percorreu:`).trim().replace(",", "."));
     //PROCESSAMENTO
-
+    const totalLitros = quilometragem/quilometros;
+    const custo = Math.floor(quilometragem/2000)*200;
 
     //SAÍDA
-
+    alert(` O total de litros consumidos é ${totalLitros.toFixed(2).replace(".", ",")}
+    O custo total da revisão é R$ ${custo.toFixed(2).replace(".", ",")}`);
 </script>
